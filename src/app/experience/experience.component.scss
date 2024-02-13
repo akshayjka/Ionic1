@@ -1,0 +1,41 @@
+ion-badge{
+    padding: 1.5%;
+    // border-radius: 30% ;
+    margin: 1%;
+}
+ion-header {
+    position: fixed;
+    
+}
+.card1-content{
+    background-image: url("/assets/counter-background.png");
+}
+.card-content {
+    color: black; font-family: sans-serif; line-height: 1.8; font-size: 16px; padding: 1%;
+}
+.container {
+    background-color: black;
+    overflow-y: scroll;
+
+}
+.content {
+    margin-top: 7%;
+}
+.img-pro{
+    width: 90%;
+    max-height: 100px;
+}
+.table-label{
+    color:#FF5C00 ;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 1%;
+}
+
+.toolbar a{
+    padding: 2%;
+    color: #FF5C00;
+  }
+  .fadeInElement{
+    padding-left: 20px;
+}

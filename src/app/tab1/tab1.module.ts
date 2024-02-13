@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
+import { SkillsComponentModule } from '../skills/skills.module';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { ExperienceComponentModule } from '../experience/experience.module';
+import { ServiceComponentModule } from '../service/service.module';
+import { ReachusComponentModule } from '../reachus/reachus.module';
 
 @NgModule({
   imports: [
@@ -13,7 +16,12 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    SkillsComponentModule,
+    Tab1PageRoutingModule,
+    ExperienceComponentModule,
+    ServiceComponentModule,
+    ReachusComponentModule
+
   ],
   declarations: [Tab1Page]
 })

@@ -1,17 +1,338 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="container">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="dark">
+
+      <ion-title class="fadeInElement"
+        style="font-family: cursive; font-weight:700; font-size: 26px; display: flex; align-items: center;">
+        <ion-row class="fadeInElement"
+          style="font-family: cursive; font-weight: 700; font-size: 26px; align-items: center;">
+          <ion-col size="12" size-lg="4"  >
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+              Akshay
+            </ion-avatar>
+          </ion-col>
+
+
+          <ion-col size="12" size-lg="8" >
+            <span class="toolbar">
+              <a href=""><ion-icon name="home-outline"></ion-icon> Home</a> </span> <span class="toolbar"> <a href="/service">
+                <ion-icon name="construct-outline"></ion-icon> Service</a> </span> <span class="toolbar"> <a href="/exp">
+                <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> 
+                <span class="toolbar"> <a href="/reachus">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
+          </ion-col>
+
+        </ion-row>
+      </ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> <br>
+  <!-- <div class="blur-effect"></div> -->
+  <ion-grid>
+    <ion-row class="middle-content1">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="4" class="fixed-column">
+
+        <ion-card color="dark" class="card1">
+          <ion-card-title style="padding: 3%; font-family: sans-serif; font-weight: 600;">Akshay</ion-card-title>
+          <img style="width: 44%; border-radius: 50%; padding: 2%;" alt="Silhouette of mountains"
+            src="\assets\frontend-dev.avif" />
+          <ion-card-header>
+
+            <ion-card-subtitle>Mean Stack Developer</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p style="text-align: center; line-height: 1.7; font-family: Libre Franklin; font-size: 17px; padding: 4%;">
+              Strong with Front End Development. Mean Stack Developer. Loves to Write and Learn.
+            </p>
+            <span style="margin-top: 3%;">
+              <ion-icon style="width: 30%; height: 40px;" name="logo-linkedin"></ion-icon>
+              <ion-icon style="width: 30%; height: 40px;" name="logo-github"></ion-icon>
+            </span>
+
+          </ion-card-content>
+        </ion-card>
+
+        <!-- <ion-card class="card">
+          <ion-card-header>
+            <p class="main-content1">
+              <span style="font-family: Impact, fantasy; color: black;
+              font-size: 36px;">
+                Hey, Hi There !
+              </span>
+
+            </p>
+            <p style=" padding-left: 20px;"> 
+              <span style="color: black; font-size: 36px;
+               font-family: Bookman, URW Bookman L, serif;">
+                a passionate
+              </span>
+              <span style="color: black; font-size: 36px;
+              font-family: Bookman, URW Bookman L, serif;">
+              MEAN STACK web developer.
+            </span>
+            </p>
+
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <p style="padding-left: 20px;">
+              <span
+                style="font-size: 20px; line-height: 1.4; color: black; font-weight: 600; font-family: Bookman, URW Bookman L, serif;">
+                I
+                thrive on creating innovative and user-centric solutions that leave a lasting impact. My journey into
+                the
+                world of
+                web development has been shaped not only by my technical expertise but also by my insatiable curiosity
+                about
+                life
+                and the human mind.
+              </span>
+
+            </p>
+          </ion-card-content>
+    
+        </ion-card> -->
+      </ion-col>
+
+      <ion-col size="12" size-sm="12" size-md="12" size-lg="8" class="scrollable-column">
+
+        <p style="color: white; font-family: Libre Franklin; font-size: 40px; padding-left: 2%;">
+          Lets Work <b style="color: #FF5C00; font-family: Libre Franklin;">Together!</b>
+        </p>
+        <p style="color: white; font-family: Libre Franklin; padding-left: 2%; line-height: 1.7; font-size: 20px;">
+          Hey, Hi There !
+          I
+          thrive on creating innovative and user-centric solutions that leave a lasting impact. My journey into
+          the
+          world of
+          web development has been shaped my technical expertise.
+          In the fast pace moving world, more than competion , I work for my personal satisfaction.
+          With the growing TechNology, I take all the things that are necessary for me.
+          If you want to know more stuff about me Let's hope down.
+        </p>
+        <p style="font-family: Lohit Bengali; color:#FF5C00; margin-left: 5%; font-size: 40px;">
+          <span> 3+</span> <span style="margin-left: 17%;"> 10+</span> <br>
+        </p>
+        <span style="color: white; padding: 5%; "> Years of experience </span>
+        <span style="color: white;">Projects</span>
+
+
+        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+
+
+        <div class="about-me">
+          <h2 style="font-size: 40px; color: white; padding-left: 2%;">About
+            <span style="color: #FF5C00;">
+              <b>Me</b>
+            </span>
+          </h2>
+
+          <p style="font-family: Libre Franklin; font-size: 42px; color: white; padding-left: 2%;">
+            I'm someone who finds profound joy in the art of design and coding
+          </p>
+
+          <p style="color: white; padding-left: 2%; line-height: 1.7; font-family: Libre Franklin;">
+            With an unwavering passion for crafting beautiful and simple creations, I pour my heart into every project I
+            undertake. My work is a reflection of my dedication to merging aesthetics with user-centered functionality.
+            With each design and code, I aim to create solutions that not only look pleasing but also make life easier
+            for
+            users. Welcome to my world of elegant simplicity, where every line of code and every pixel hold the essence
+            of
+            my love for what I do.
+          </p>
+
+        </div>
+
+        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+
+        <app-skills></app-skills>
+
+
+        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+
+        <!-- FEATURE PROJECT -->
+
+        <div class="Feature-Project">
+          <h2 style="font-size: 40px; color: white; padding: 2%;">Featured
+            <b style="color: #FF5C00;">
+              Projects
+            </b>
+           <span>View Full Archive</span> 
+          </h2>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-sm="12">
+                <ion-card class="card1-content">
+                  <img alt="Silhouette of mountains" src="\assets\wealth.png" />
+                  <ion-card-header>
+                    <ion-card-title>
+                      <h3 style="font-weight: 600; font-family: sans-serif;"> Wealth Bridge Consultancy </h3>
+                    </ion-card-title>
+                    <ion-card-subtitle style="color: black; font-weight: 500; font-size: large;">
+                      Web Appliaction </ion-card-subtitle>
+                  </ion-card-header>
+
+                  <ion-card-content>
+                    <p class="card-content">
+                      Here's a Web application for a accounting firm web personalization. Also we have a software for
+                      its
+                      pipeline project. This web application have multiple features and build with Angular 13.
+                      With strong animations and professional css as per Quatar regulations and with the
+                      Customer-obsessed Themes and System design as per their standards.
+                    </p>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Angular</ion-label>
+                      <ion-icon name="logo-angular"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>HTML</ion-label>
+                      <ion-icon name="logo-html5"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>CSS</ion-label>
+                      <ion-icon name="logo-css3"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>JavaScript</ion-label>
+                      <ion-icon name="logo-javascript"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Angular Material</ion-label>
+                      <ion-icon name="logo-angular"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>BootStrap</ion-label>
+                      <ion-icon name="desktop-outline"></ion-icon>
+                    </ion-chip>
+
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="12" size-sm="12">
+                <ion-card class="card1-content">
+                  <img alt="Silhouette of mountains" src="\assets\shopEZ.png" />
+                  <ion-card-header>
+                    <ion-card-title>ShopEZ</ion-card-title>
+                    <ion-card-subtitle>E-Commerce</ion-card-subtitle>
+                  </ion-card-header>
+
+                  <ion-card-content>
+                    <p class="card-content">
+                      Here's a small text description for the ShopEZ. This is a E-Commerce for men and women specalized
+                      for
+                      Stylish and look feel rich products arena. build with user friendly and catches all user details,
+                      for strong recommendation according to their previous searched products.
+                    </p>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Angular</ion-label>
+                      <ion-icon name="logo-angular"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>HTML</ion-label>
+                      <ion-icon name="logo-html5"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>CSS</ion-label>
+                      <ion-icon name="logo-css3"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>JavaScript</ion-label>
+                      <ion-icon name="logo-javascript"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Angular Material</ion-label>
+                      <ion-icon name="logo-angular"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>BootStrap</ion-label>
+                      <ion-icon name="desktop-outline"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Ionic</ion-label>
+                      <ion-icon name="logo-ionic"></ion-icon>
+                    </ion-chip>
+                    <ion-chip>
+                      <ion-icon name="pin" color="primary"></ion-icon>
+                      <ion-label>Web Secure</ion-label>
+                      <ion-icon name="document-lock-outline"></ion-icon>
+                    </ion-chip>
+
+
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+
+
+            </ion-row>
+          </ion-grid>
+        </div>
+
+
+        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+
+
+        <div class="contact-me">
+          <h2 style="font-size: 40px; color: white; padding: 2%;">Contact
+            <b style="color: #FF5C00;">
+              Me
+            </b>
+          </h2>
+
+          <p style="padding-left: 2%; color: white;">Lets get in touch</p>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                <ion-input label="Email" label-placement="floating" placeholder="Enter Email"></ion-input>
+              </ion-col>
+              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                <ion-input label="Name" label-placement="floating" placeholder="Enter Name"></ion-input>
+              </ion-col>
+              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                <ion-input label="Phone " label-placement="floating" type="number" placeholder="000"></ion-input>
+              </ion-col>
+              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                <ion-input label="City or State" label-placement="floating"
+                  placeholder="Enter City or State"></ion-input>
+              </ion-col>
+
+              <ion-textarea label="Content" labelPlacement="floating" placeholder="Enter text"></ion-textarea>
+
+              <button class="button">Submit</button>
+
+            </ion-row>
+
+          </ion-grid>
+
+        </div>
+
+        <button class="scroll-to-top" (click)="scrollToTop()"><img class="image" src="\assets\icons\image8.2.png" alt=""></button>
+        
+      </ion-col>
+    </ion-row>
+    <!-- <app-skills></app-skills> -->
+
+
+  </ion-grid>
+
+
+
+
+</div>

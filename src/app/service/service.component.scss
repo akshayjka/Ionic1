@@ -1,0 +1,73 @@
+.container{
+    background-color: black;
+    display: flex;
+    overflow-y: scroll;
+}.toolbar a{
+    padding: 2%;
+    color: #FF5C00;
+  }
+  .fadeInElement{
+    padding-left: 20px;
+}
+
+ion-toolbar {
+    height: 100%;
+  }
+  ion-header {
+    position: fixed;
+    
+}
+.intro-part {
+    margin-top: 7%;
+}
+.video{
+    width:100%;
+}
+.card {
+    min-height: 400px;
+}
+.image-icon{
+    width: 10%; background-color: #FF5C00;
+    animation: shake 1s ease 10;
+}
+.image-icon:hover {
+    animation: shake 0.5s ease infinite;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(5deg); }
+    50% { transform: translateX(5px) rotate(-5deg); }
+    75% { transform: translateX(-5px) rotate(5deg); }
+    100% { transform: translateX(0); }
+  }
+
+  ion-input{
+    // background-color: #FF5C00;
+    color: #FF5C00;
+   }
+   ion-textarea{
+    color: #FF5C00;
+    padding-left: 2%;
+   }
+   .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    color: #333;
+    background-color: #FF5C00;
+    padding: 1%;
+    margin: 2%;
+    width: 30%;
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: #333;
+    color: #fff;
+  }

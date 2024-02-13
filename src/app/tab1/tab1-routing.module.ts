@@ -4,9 +4,10 @@ import { Tab1Page } from './tab1.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '/',
     component: Tab1Page,
-  }
+  },
+
 ];
 
 @NgModule({

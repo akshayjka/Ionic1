@@ -29,10 +29,20 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
-              }
+              },
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -44,8 +54,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 }
               ],
               "fileReplacements": [
@@ -109,7 +119,15 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
-              }
+              },
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest",
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": []
@@ -136,7 +154,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "9e08f8bf-88c9-47e0-abcc-bbf164d9e799"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
