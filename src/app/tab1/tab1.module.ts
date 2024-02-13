@@ -9,6 +9,7 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { ExperienceComponentModule } from '../experience/experience.module';
 import { ServiceComponentModule } from '../service/service.module';
 import { ReachusComponentModule } from '../reachus/reachus.module';
+import { HomeComponentModule } from '../home/home.module';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { ReachusComponentModule } from '../reachus/reachus.module';
     Tab1PageRoutingModule,
     ExperienceComponentModule,
     ServiceComponentModule,
-    ReachusComponentModule
+    ReachusComponentModule,
+    HomeComponentModule
 
   ],
   declarations: [Tab1Page]
