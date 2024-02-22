@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimationController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AnimationController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-service',
@@ -9,7 +10,7 @@ import { AnimationController } from '@ionic/angular';
 export class ServiceComponent  implements OnInit {
 
   constructor(
-    private animationController: AnimationController
+    private animationController: AnimationController,private menuController: MenuController, private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,6 +25,18 @@ export class ServiceComponent  implements OnInit {
   
       fadeInAnimation.play();
     }
+  }
+  toggleMenu() {
+    this.menuController.toggle('main-menu');
+  }
+
+  // Function to close the side menu and navigate to a specific page
+  closeMenuAndNavigate(url: string) {
+    this.menuController.close('main-menu');
+    this.router.navigateByUrl(url);
+  }
+  goto(event:string){
+    this.router.navigateByUrl(event);
   }
 
 }

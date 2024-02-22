@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { AnimationController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AnimationController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ import { AnimationController } from '@ionic/angular';
 export class HomeComponent  implements OnInit {
 
   scrollToTopButton: any;
+  isSmallScreen!: boolean;
+
   // animationController: any;
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // 'smooth' for smooth scrolling
@@ -28,7 +31,21 @@ export class HomeComponent  implements OnInit {
   }
 
 
-  constructor(private animationController: AnimationController) { }
+  constructor(private animationController: AnimationController,private menuController: MenuController, private router: Router) {
+    
+   }
+   toggleMenu() {
+    this.menuController.toggle('main-menu');
+  }
+
+  // Function to close the side menu and navigate to a specific page
+  closeMenuAndNavigate(url: string) {
+    this.menuController.close('main-menu');
+    this.router.navigateByUrl(url);
+  }
+  //  checkScreenWidth() {
+  //   this.isSmallScreen = window.innerWidth < 768; 
+  // }
 
   ngOnInit() {
     const element = document.querySelector('.fadeInElement');

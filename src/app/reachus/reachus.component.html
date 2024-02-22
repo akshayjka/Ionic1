@@ -1,25 +1,43 @@
-<div class="container">
 
-  <ion-header [translucent]="true">
+<div class="container">
+  
+  <ion-menu contentId="main-content">
+
+    <!-- <ion-content class="ion-padding"> -->
+  
+                <div class="toolbar">
+                  <a class="button" id="side-btn" href="/home">Home</a> <br>
+                  <a class="button" id="side-btn" href="/service">Service</a> <br>
+                  <a class="button" id="side-btn" href="/exp">Work</a> <br>
+                  <a class="button" id="side-btn" href="/home">Home</a>
+                </div>
+  
+    <!-- </ion-content> -->
+  </ion-menu>
+
+      <ion-header [translucent]="true">
     <ion-toolbar color="dark">
 
       <ion-title class="fadeInElement"
         style="font-family: cursive; font-weight:700; font-size: 26px; display: flex; align-items: center;">
         <ion-row class="fadeInElement"
           style="font-family: cursive; font-weight: 700; font-size: 26px; align-items: center;">
-          <ion-col size="6" size-lg="6" size-md="6">
+           
+          <ion-col size="9" size-lg="9" size-md="9" size-sm="9">           
             <ion-avatar>
-              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
               <span style="padding: 1%;"> Akshay</span>
+              
             </ion-avatar>
           </ion-col>
 
-          <ion-col size="6" size-lg="6" size-md="6">
-            <span class="toolbar">
-              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span> <span class="toolbar"> <a href="/service">
-                <ion-icon name="construct-outline"></ion-icon> Service</a> </span> <span class="toolbar"> <a href="/exp">
-                <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="toolbar"> <a href="/reachus">
-                <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
+          <ion-col size="3" size-lg="3" size-md="3" size-sm="3">
+                  <div>
+                    <ion-buttons slot="end">
+                      <ion-menu-button></ion-menu-button>
+                    </ion-buttons>
+                  </div>
+
           </ion-col>
 
         </ion-row>
@@ -28,8 +46,9 @@
   </ion-header>
 
 
-  <ion-grid>
-    <ion-row class="middle-content1">
+
+  <ion-grid >
+    <ion-row class="middle-content1" id="main-content">
 
       <ion-col size="12" size-sm="12" size-md="12" size-lg="4" class="fixed-column">
 

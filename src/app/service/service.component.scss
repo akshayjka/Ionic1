@@ -2,10 +2,7 @@
     background-color: black;
     display: flex;
     overflow-y: scroll;
-}.toolbar a{
-    padding: 2%;
-    color: #FF5C00;
-  }
+}
   .fadeInElement{
     padding-left: 20px;
 }
@@ -60,9 +57,9 @@ ion-toolbar {
     border-radius: 5px;
     color: #333;
     background-color: #FF5C00;
-    padding: 1%;
+    padding: 2%;
     margin: 2%;
-    width: 30%;
+    // width: 100%;
     cursor: pointer;
   }
   
@@ -70,4 +67,22 @@ ion-toolbar {
   .button:hover {
     background-color: #333;
     color: #fff;
+  }
+
+  //topbar css
+
+  ion-menu{
+    // width: 20%;
+    z-index: 1;
+    margin-top: 9%;
+  }
+  .toolbar {
+  // background-color: #333;
+  background-image: url("/assets/counter-background.png");
+  height: 100%;
+  }
+  #side-btn{
+    width: 70%;
+    padding: 5%;
+    margin-top: 2%;
   }
