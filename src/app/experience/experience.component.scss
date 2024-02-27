@@ -65,10 +65,24 @@ ion-header {
 ion-menu{
     // width: 20%;
     z-index: 1;
-    margin-top: 9%;
+    margin-top: 6%;
+  }
+  @media screen and (max-width:750px) {
+    ion-menu{
+        margin-top: 19%;
+    }
+  }
+  .heading-h2{
+    font-size: 40px; 
+    color: white; 
+    padding: 2%;
+  }
+  @media screen and (max-width:750px) {
+    .heading-h2{
+        margin-top: 20%;
+    }
   }
   .toolbar {
-  // background-color: #333;
   background-image: url("/assets/counter-background.png");
   height: 100%;
   }

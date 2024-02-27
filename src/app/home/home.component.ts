@@ -1,6 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AnimationController, MenuController } from '@ionic/angular';
+import { ApiService } from '../api.service';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-home',
@@ -11,28 +14,27 @@ export class HomeComponent  implements OnInit {
 
   scrollToTopButton: any;
   isSmallScreen!: boolean;
+  contactForm:FormGroup;
 
   // animationController: any;
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // 'smooth' for smooth scrolling
-  }
-  @HostListener('window:scroll', [])
-  onScroll() {
-    // Show the button when the user scrolls down a certain amount
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-    const showButtonThreshold = 200; // Adjust as needed
-    this.scrollToTopButton = document.querySelector('.scroll-to-top');
 
-    if (scrollY > showButtonThreshold) {
-      this.scrollToTopButton.classList.add('show');
-    } else {
-      this.scrollToTopButton.classList.remove('show');
-    }
-  }
+  
 
 
-  constructor(private animationController: AnimationController,private menuController: MenuController, private router: Router) {
-    
+
+  constructor(private animationController: AnimationController,
+    private menuController: MenuController, 
+    private router: Router, 
+    private fb:FormBuilder,
+    private api_service:ApiService
+    ) {
+    this.contactForm = this.fb.group({
+      email:[''],
+      name:[''],
+      phone:[''],
+      city:[''],
+      text:['']
+    })
    }
    toggleMenu() {
     this.menuController.toggle('main-menu');
@@ -43,9 +45,7 @@ export class HomeComponent  implements OnInit {
     this.menuController.close('main-menu');
     this.router.navigateByUrl(url);
   }
-  //  checkScreenWidth() {
-  //   this.isSmallScreen = window.innerWidth < 768; 
-  // }
+
 
   ngOnInit() {
     const element = document.querySelector('.fadeInElement');
@@ -59,6 +59,16 @@ export class HomeComponent  implements OnInit {
   
       fadeInAnimation.play();
     }
+
+
+  }
+  submitForm() {
+    emailjs.init('XwnxwBXp56Lfk9wGU')
+    emailjs.send("service_qcba45w","template_z942xkp",{
+      from_name: this.contactForm.value.name,
+      to_name: "Akshay",
+      message: this.contactForm.value.text,
+      });
   }
 
 }

@@ -29,21 +29,9 @@
       </ion-title>
     </ion-toolbar>
   </ion-header> -->
-  <ion-menu contentId="main-content">
 
-    <ion-content class="ion-padding">
 
-                <div class="toolbar">
-                  <a class="button" id="side-btn" href="/home">Home</a> <br>
-                <a class="button" id="side-btn" href="/service">Service</a> <br>
-                <a class="button" id="side-btn" href="/exp">Work</a> <br>
-                <a class="button" id="side-btn" href="/reachus">ReachUs</a>
-                </div>
-
-    </ion-content>
-  </ion-menu>
-
-      <ion-header [translucent]="true">
+      <ion-header [translucent]="true" id="main-content">
     <ion-toolbar color="dark">
 
       <ion-title class="fadeInElement"
@@ -72,12 +60,27 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-menu contentId="main-content">
+
+    <ion-content class="ion-padding">
+
+                <div class="toolbar">
+                  <a class="button" id="side-btn" href="/home">Home</a> <br>
+                <a class="button" id="side-btn" href="/service">Service</a> <br>
+                <a class="button" id="side-btn" href="/exp">Work</a> <br>
+                <a class="button" id="side-btn" href="/reachus">ReachUs</a>
+                </div>
+
+    </ion-content>
+  </ion-menu>
   <br>
   <!-- <div class="blur-effect"></div> -->
-  <ion-grid>
-    <ion-row class="middle-content1" id="main-content">
 
-      <ion-col size="12" size-sm="12" size-md="12" size-lg="4" class="fixed-column">
+  <ion-grid >
+    <ion-row class="middle-content1" >
+
+      <ion-col class="fixed-column" size="12" size-sm="12" size-md="12" size-lg="4" >
 
         <ion-card color="dark" class="card1">
           <ion-card-title style="padding: 3%; font-family: sans-serif; font-weight: 600;">Akshay</ion-card-title>
@@ -100,48 +103,10 @@
           </ion-card-content>
         </ion-card>
 
-        <!-- <ion-card class="card">
-          <ion-card-header>
-            <p class="main-content1">
-              <span style="font-family: Impact, fantasy; color: black;
-              font-size: 36px;">
-                Hey, Hi There !
-              </span>
-
-            </p>
-            <p style=" padding-left: 20px;"> 
-              <span style="color: black; font-size: 36px;
-               font-family: Bookman, URW Bookman L, serif;">
-                a passionate
-              </span>
-              <span style="color: black; font-size: 36px;
-              font-family: Bookman, URW Bookman L, serif;">
-              MEAN STACK web developer.
-            </span>
-            </p>
-
-          </ion-card-header>
-
-          <ion-card-content>
-
-            <p style="padding-left: 20px;">
-              <span
-                style="font-size: 20px; line-height: 1.4; color: black; font-weight: 600; font-family: Bookman, URW Bookman L, serif;">
-                I
-                thrive on creating innovative and user-centric solutions that leave a lasting impact. My journey into
-                the
-                world of
-                web development has been shaped not only by my technical expertise but also by my insatiable curiosity
-                about
-                life
-                and the human mind.
-              </span>
-
-            </p>
-          </ion-card-content>
-    
-        </ion-card> -->
+     
       </ion-col>
+
+     
 
       <ion-col size="12" size-sm="12" size-md="12" size-lg="8" class="scrollable-column">
 
@@ -206,7 +171,10 @@
             <b style="color: #FF5C00;">
               Projects
             </b>
-           <span>View Full Archive</span> 
+           <span style="padding: 10%;">
+            <a class="view-work" href="/exp">View Full Archive
+              <ion-icon name="arrow-up-outline"></ion-icon>
+            </a></span> 
           </h2>
           <ion-grid>
             <ion-row>
@@ -344,34 +312,80 @@
 
           <ion-grid>
             <ion-row>
-              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                <ion-input label="Email" label-placement="floating" placeholder="Enter Email"></ion-input>
-              </ion-col>
-              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                <ion-input label="Name" label-placement="floating" placeholder="Enter Name"></ion-input>
-              </ion-col>
-              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                <ion-input label="Phone " label-placement="floating" type="number" placeholder="000"></ion-input>
-              </ion-col>
-              <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                <ion-input label="City or State" label-placement="floating"
-                  placeholder="Enter City or State"></ion-input>
-              </ion-col>
+              <form [formGroup]="contactForm">
 
-              <ion-textarea label="Content" labelPlacement="floating" placeholder="Enter text"></ion-textarea>
+                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                  <ion-input label="Email" label-placement="floating" placeholder="Enter Email" formControlName="email"></ion-input>
+                </ion-col>
+                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                  <ion-input label="Name" label-placement="floating" placeholder="Enter Name" formControlName="name"></ion-input>
+                </ion-col>
+                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                  <ion-input label="Phone " label-placement="floating" type="number" placeholder="000" formControlName="phone"></ion-input>
+                </ion-col>
+                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                  <ion-input label="City or State" label-placement="floating"
+                    placeholder="Enter City or State" formControlName="city"></ion-input>
+                </ion-col>
+  
+                <ion-textarea label="Content" labelPlacement="floating" placeholder="Enter text" formControlName="text"></ion-textarea>
+                <button class="button" (click)="submitForm()">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  Submit</button>
 
-              <button class="button">Submit</button>
+              </form>
+   
+             
 
             </ion-row>
 
           </ion-grid>
 
+          
+
         </div>
 
-        <button class="scroll-to-top" (click)="scrollToTop()"><img class="image" src="\assets\icons\image8.2.png" alt=""></button>
+        <!-- <button class="scroll-to-top" (click)="scrollToTop()">
+          <img class="image" src="\assets\icons\image8.2.png" alt="Scroll to Top">
+        </button> -->
         
       </ion-col>
+      <ion-footer >
+        <ion-toolbar color="dark">
+          <ion-title>
+  
+            <span style="text-align: center;">
+              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+              </svg> 2024 Akshay</p>
+            </span>
+            <div style="text-align: center;">
+              <span style="padding: 1%;">
+                <a style="text-decoration: none; color: #FF5C00;" href="/home"><ion-icon name="home-outline"></ion-icon> Home</a>
+              </span> 
+              <span style="padding: 1%;">
+                <a style="text-decoration: none; color: #FF5C00;" href="/service">
+                  <ion-icon name="construct-outline"></ion-icon> Service</a>
+              </span> 
+              <span style="padding: 1%;">
+                <a style="text-decoration: none; color: #FF5C00;"
+                href="/exp">
+                <ion-icon name="code-working-outline"></ion-icon> Work</a>
+              </span> 
+              <span style="padding: 1%;">
+                <a style="text-decoration: none; color: #FF5C00;"
+                href="/reachus">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a>
+              </span>
+            </div>
+           
+               
+          </ion-title>
+        </ion-toolbar>
+      </ion-footer>
     </ion-row>
+
+    
     <!-- <app-skills></app-skills> -->
 
 

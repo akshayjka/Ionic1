@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AnimationController, MenuController } from '@ionic/angular';
 
@@ -8,10 +9,22 @@ import { AnimationController, MenuController } from '@ionic/angular';
   styleUrls: ['./service.component.scss'],
 })
 export class ServiceComponent  implements OnInit {
+  contactForm:FormGroup;
+
 
   constructor(
-    private animationController: AnimationController,private menuController: MenuController, private router: Router
-  ) { }
+    private animationController: AnimationController,private menuController: MenuController, 
+    private router: Router,
+    private fb:FormBuilder
+  ) { 
+    this.contactForm = this.fb.group({
+      email:[''],
+      name:[''],
+      phone:[''],
+      city:[''],
+      text:['']
+    })
+  }
 
   ngOnInit() {
     const element = document.querySelector('.fadeInElement');
@@ -37,6 +50,10 @@ export class ServiceComponent  implements OnInit {
   }
   goto(event:string){
     this.router.navigateByUrl(event);
+  }
+
+  submitForm() {
+    console.log("The service page submit form is working", this.contactForm.value)
   }
 
 }

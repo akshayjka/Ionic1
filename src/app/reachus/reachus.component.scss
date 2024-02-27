@@ -168,11 +168,14 @@ ion-toolbar {
   transform: translateY(1px);
 }
 ion-menu{
-  // width: 20%;
   z-index: 1;
-  margin-top: 10%;
+  margin-top: 6%;
 }
-
+@media screen and (max-width:750px) {
+  ion-menu{
+    margin-top:30%;
+  }
+}
 
 // #main-content{
 //   background-color: #333;
