@@ -69,7 +69,7 @@
     @media only screen and (max-width: 576px) {
       .middle-content1 {
         
-        margin-top: 50%; /* Add spacing between stacked toolbar items */
+        margin-top: 20%; 
       }
     }
 
@@ -186,6 +186,13 @@
     position: fixed;
     margin-top: 3%;
     }
+    @media screen and (max-width:768px) {
+      .fixed-column {
+        flex-direction: column;
+          position: relative; 
+          // margin-top: 5%;
+      }
+    }
     
     .scrollable-column {
       flex: 0 0 60%; /* Adjust the width based on your requirements */
@@ -196,12 +203,12 @@
   
     @media screen and (max-width: 768px) {
    
-      .fixed-column{
-        flex-direction: column;
-        position: relative; 
-        margin-top: 20%;/* Take full width on smaller screens */
+      // .fixed-column{
+      //   flex-direction: column;
+      //   position: relative; 
+      //   margin-top: 5%;/* Take full width on smaller screens */
         
-      }
+      // }
       .scrollable-column {
         flex:1;
       /* Remove margin to stack columns on top of each other */
