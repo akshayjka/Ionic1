@@ -31,7 +31,7 @@
   </ion-header> -->
 
 
-      <ion-header [translucent]="true" id="main-content">
+      <ion-header  id="main-content">
     <ion-toolbar color="dark">
 
       <ion-title class="fadeInElement"
@@ -93,7 +93,7 @@
 
           <ion-card-content>
             <p style="text-align: center; line-height: 1.7; font-family: Libre Franklin; font-size: 17px; padding: 4%;">
-              Strong with Front End Development. Mean Stack Developer. Loves to Write and Learn.
+              Strong with Front End Development. Mean Stack Developer. Loves to Code, Develop and Create.
             </p>
             <span style="margin-top: 3%;">
               <ion-icon style="width: 30%; height: 40px;" name="logo-linkedin"></ion-icon>
@@ -122,7 +122,7 @@
           web development has been shaped my technical expertise.
           In the fast pace moving world, more than competion , I work for my personal satisfaction.
           With the growing TechNology, I take all the things that are necessary for me.
-          If you want to know more stuff about me Let's hope down.
+          If you want to know more stuff about me Let's hop down.
         </p>
         <p style="font-family: Lohit Bengali; color:#FF5C00; margin-left: 5%; font-size: 40px;">
           <span> 3+</span> <span style="margin-left: 17%;"> 10+</span> <br>
@@ -312,29 +312,29 @@
 
           <ion-grid>
             <ion-row>
-              <form [formGroup]="contactForm">
+              <ion-col size="12" size-sm="12" size-md="12" size-lg="12">
+                <form [formGroup]="contactForm">
 
-                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                  <ion-input label="Email" label-placement="floating" placeholder="Enter Email" formControlName="email"></ion-input>
-                </ion-col>
-                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                  <ion-input label="Name" label-placement="floating" placeholder="Enter Name" formControlName="name"></ion-input>
-                </ion-col>
-                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                  <ion-input label="Phone " label-placement="floating" type="number" placeholder="000" formControlName="phone"></ion-input>
-                </ion-col>
-                <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                  <ion-input label="City or State" label-placement="floating"
-                    placeholder="Enter City or State" formControlName="city"></ion-input>
-                </ion-col>
+                  <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                    <ion-input fill="outline" label="Email" label-placement="floating" placeholder="Enter Email" formControlName="email"></ion-input>
+                  </ion-col>
+                  <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                    <ion-input fill="outline" label="Name" label-placement="floating" placeholder="Enter Name" formControlName="name"></ion-input>
+                  </ion-col>
+                  <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                    <ion-input fill="outline" label="Phone " label-placement="floating" type="number" placeholder="000" formControlName="phone"></ion-input>
+                  </ion-col>
+                  <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
+                    <ion-input fill="outline" label="City or State" label-placement="floating"
+                      placeholder="Enter City or State" formControlName="city"></ion-input>
+                  </ion-col>
+    
+                  <ion-textarea fill="outline" label="Content" labelPlacement="floating" placeholder="Enter text" formControlName="text"></ion-textarea>
   
-                <ion-textarea label="Content" labelPlacement="floating" placeholder="Enter text" formControlName="text"></ion-textarea>
-                <button class="button" (click)="submitForm()">
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                  Submit</button>
-
-              </form>
-   
+                  <button type="submit"  class="button" (click)="submitForm()" id="open-loading" [disabled]="contactForm.invalid"[class.disabled]="contactForm.invalid">Submit</button>
+  <ion-loading trigger="open-loading" message="Submitting..." [duration]="3000" spinner="circles"></ion-loading>
+                </form>
+              </ion-col>
              
 
             </ion-row>

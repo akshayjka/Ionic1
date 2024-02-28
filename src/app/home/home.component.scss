@@ -1,7 +1,6 @@
-
-.toolbar {
-    // margin-right: 10px; /* Adjust spacing between toolbar items */
-  }
+ion-toolbar {
+  height: 100px;
+}
   
   /* Media query for small screens (e.g., smartphones) */
   @media only screen and (max-width: 576px) {
@@ -14,8 +13,9 @@
   
   ion-header {
       position: fixed;
-      
+      z-index: 3;
   }
+
 
   .container {
       overflow-y: scroll;
@@ -217,14 +217,20 @@
     }
     
    ion-input{
-    // background-color: #FF5C00;
-    color: #FF5C00;
+    // color: #FF5C00;
+    color: white;
+    // width: 500px;
    }
    ion-textarea{
-    color: #FF5C00;
-    padding-left: 2%;
+    // color: #FF5C00;
+    color: white;
+    // padding-left: 2%;
    }
    /* Base styles for the button */
+
+   ion-button {
+    color: transparent;
+   }
    .button {
     display: inline-block;
     padding: 10px 20px;
@@ -241,8 +247,13 @@
     // width: 100%;
     cursor: pointer;
   }
+  .button.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+  }
   form {
     z-index: 0;
+    // width:;
   }
   
   /* Hover effect */

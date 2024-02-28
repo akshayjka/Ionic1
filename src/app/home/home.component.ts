@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AnimationController, MenuController } from '@ionic/angular';
 import { ApiService } from '../api.service';
-import emailjs from 'emailjs-com';
+import { ToastController } from '@ionic/angular';
+import emailjs, { send } from 'emailjs-com';
 
 @Component({
   selector: 'app-home',
@@ -26,16 +27,27 @@ export class HomeComponent  implements OnInit {
     private menuController: MenuController, 
     private router: Router, 
     private fb:FormBuilder,
-    private api_service:ApiService
+    private api_service:ApiService,
+    private toastController: ToastController
     ) {
     this.contactForm = this.fb.group({
-      email:[''],
-      name:[''],
-      phone:[''],
-      city:[''],
-      text:['']
+      email:['', Validators.required],
+      name:['', Validators.required],
+      phone:['', Validators.required],
+      city:['', Validators.required],
+      text:['', Validators.required]
     })
    }
+   async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Your Message has submitted Successfully!',
+      duration: 2500,
+      position: position,
+      icon: 'checkmark-circle-outline'
+    });
+
+    await toast.present();
+  }
    toggleMenu() {
     this.menuController.toggle('main-menu');
   }
@@ -69,6 +81,11 @@ export class HomeComponent  implements OnInit {
       to_name: "Akshay",
       message: this.contactForm.value.text,
       });
+      setTimeout(() => {
+      this.presentToast('top');
+      this.contactForm.reset();
+        
+      }, 3500);
   }
 
 }

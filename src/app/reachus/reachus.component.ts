@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MenuController, Platform } from '@ionic/angular';
+import { MenuController, Platform, ToastController } from '@ionic/angular';
 import emailjs from 'emailjs-com';
 
 @Component({
@@ -19,14 +19,15 @@ export class ReachusComponent  implements OnInit {
      private router: Router,
       private platform: Platform,
       private fb:FormBuilder,
+      private toastController: ToastController
       ) { 
     this.setScreenSize();
     this.contactForm = this.fb.group({
-      email:[''],
-      name:[''],
-      phone:[''],
-      city:[''],
-      text:['']
+      email:['', Validators.required],
+      name:['', Validators.required],
+      phone:['', Validators.required],
+      city:['', Validators.required],
+      text:['', Validators.required]
     })
   }
 
@@ -43,24 +44,27 @@ export class ReachusComponent  implements OnInit {
     }
   }
  
-  toggleDropdown(): void {
-    this.showDropdown = !this.showDropdown;
-  }
+  // toggleDropdown(): void {
+  //   this.showDropdown = !this.showDropdown;
+  // }
 
-  isSmallScreen(): boolean {
-    return this.platform.width() <= 576; // Adjust the breakpoint as needed
-  }
-
-
-
-  // Function to close the side menu and navigate to a specific page
-  // closeMenuAndNavigate(url: string) {
-  //   this.menuController.close('main-menu');
-  //   this.router.navigateByUrl(url);
+  // isSmallScreen(): boolean {
+  //   return this.platform.width() <= 576; // Adjust the breakpoint as needed
   // }
 
   goto(event:string){
     this.router.navigate([event]); 
+  }
+
+  async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Your Message has submitted Successfully!',
+      duration: 2500,
+      position: position,
+      icon: 'checkmark-circle-outline'
+    });
+
+    await toast.present();
   }
 
   submitForm() {
@@ -70,5 +74,10 @@ export class ReachusComponent  implements OnInit {
       to_name: "Akshay",
       message: this.contactForm.value.text,
       });
+      setTimeout(() => {
+      this.presentToast('top');
+      this.contactForm.reset();
+        
+      }, 3500);
   }
 }

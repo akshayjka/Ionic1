@@ -127,11 +127,12 @@ ion-toolbar {
   
  ion-input{
   // background-color: #FF5C00;
+  // width: ;
   color: #FF5C00;
  }
  ion-textarea{
   color: #FF5C00;
-  padding-left: 2%;
+  // padding-left: 2%;
  }
  /* Base styles for the button */
 .button {
@@ -149,6 +150,10 @@ ion-toolbar {
   margin: 2%;
   // width: 100%;
   cursor: pointer;
+}
+.button.disabled{
+  pointer-events: none;
+  opacity: 0.5;
 }
 #side-btn{
   width: 70%;
@@ -169,7 +174,7 @@ ion-toolbar {
 }
 ion-menu{
   z-index: 1;
-  margin-top: 6%;
+  margin-top: 8%;
 }
 @media screen and (max-width:750px) {
   ion-menu{

@@ -25,7 +25,7 @@ ion-toolbar {
 }
 .image-icon{
     width: 10%; background-color: #FF5C00;
-    animation: shake 1s ease 10;
+    animation: shake 1s ease infinite;
 }
 .image-icon:hover {
     animation: shake 0.5s ease infinite;
