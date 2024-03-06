@@ -203,8 +203,6 @@ height: 100%;
   display: block; /* Show menu icon on small screens */
 }
 
-
-
 .toolbar-container-visible {
   display: block; 
 }
@@ -217,6 +215,9 @@ height: 100%;
   color:#FF5C00 ;
   right: 0; /* Position at the right end */
   transform: translateY(-50%);
+}
+ion-footer{
+  z-index: 0;
 }
 
 

@@ -75,6 +75,11 @@ ion-menu{
       height:500px;
     }
   }
+  @media screen and (max-width:750px) {
+      #buildwith {
+        display: none;
+      }
+  }
   .heading-h2{
     font-size: 40px; 
     color: white; 
