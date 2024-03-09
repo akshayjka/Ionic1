@@ -39,7 +39,7 @@
         <ion-row class="fadeInElement"
           style="font-family: cursive; font-weight: 700; font-size: 26px; align-items: center;">
            
-          <ion-col size="9" size-lg="9" size-md="9" size-sm="9">           
+          <ion-col size="9" size-lg="5" size-md="3" size-sm="7">           
             
               <div style="display: flex; align-items: center;">
                 <!-- <ion-avatar > -->
@@ -48,17 +48,32 @@
               <!-- </ion-avatar> -->
               </div>
               
-              
- 
           </ion-col>
 
-          <ion-col size="3" size-lg="3" size-md="3" size-sm="3">
-                  <div>
+          <!--  MENU ICON WITH SIDEBAR-->
+
+          <ion-col size="1" size-sm="1">
+                  <div class="menu-sidebar">
                     <ion-buttons slot="end">
                       <ion-menu-button></ion-menu-button>
                     </ion-buttons>
                   </div>
 
+          </ion-col>
+
+
+          <ion-col size="6" size-lg="6" size-md="6" >
+            <span class="topbar-toolbar">
+              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
+               <!-- <span class="topbar-toolbar"> <a
+                href="/service">
+                <ion-icon name="construct-outline"></ion-icon> Service</a> </span>  -->
+                
+                <span class="topbar-toolbar"> <a
+                href="/exp">
+                <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="topbar-toolbar"> <a
+                href="/reachus">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
           </ion-col>
 
         </ion-row>
@@ -72,7 +87,7 @@
 
                 <div class="toolbar">
                   <a class="button" id="side-btn" href="/home">Home</a> <br>
-                <a class="button" id="side-btn" href="/service">Service</a> <br>
+                <!-- <a class="button" id="side-btn" href="/service">Service</a> <br> -->
                 <a class="button" id="side-btn" href="/exp">Work</a> <br>
                 <a class="button" id="side-btn" href="/reachus">ReachUs</a>
                 </div>
@@ -89,8 +104,23 @@
 
         <ion-card color="dark" class="card1">
           <ion-card-title style="padding: 3%; font-family: sans-serif; font-weight: 600;">Akshay</ion-card-title>
-          <img style="width: 44%; border-radius: 50%; padding: 2%;" alt="Silhouette of mountains"
-            src="\assets\frontend-dev.avif" />
+          <!-- <img style="width: 44%; border-radius: 50%; padding: 2%;" alt="Silhouette of mountains"
+            src="\assets\frontend-dev.avif" /> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+              <!-- Portfolio Icon -->
+              <path d="M5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 2v14h14V4H5zm6 6h2v2h-2V10zm0 4h2v2h-2v-2zm-4-4h2v2H7V10zm0 4h2v2H7v-2zm8-8h2v2h-2V6zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z" fill="currentColor">
+                <animateTransform 
+                  attributeName="transform" 
+                  type="rotate" 
+                  from="0 12 12" 
+                  to="360 12 12" 
+                  dur="2s" 
+                  repeatCount="indefinite" 
+                />
+              </path>
+            </svg>
+            
+            <!-- <video class="video" src="\assets\20764468.mp4" [muted]="'muted'" autoplay loop></video> -->
           <ion-card-header>
 
             <ion-card-subtitle>Mean Stack Developer</ion-card-subtitle>
@@ -199,7 +229,7 @@
                       Here's a Web application for a accounting firm web personalization. Also we have a software for
                       its
                       pipeline project. This web application have multiple features and build with Angular 13.
-                      With strong animations and professional css as per Quatar regulations and with the
+                      With strong animations and professional css as per Qatar regulations and with the
                       Customer-obsessed Themes and System design as per their standards.
                     </p>
                     <ion-chip>
@@ -248,7 +278,7 @@
                     <p class="card-content">
                       Here's a small text description for the ShopEZ. This is a E-Commerce for men and women specalized
                       for
-                      Stylish and look feel rich products arena. build with user friendly and catches all user details,
+                      Stylish and look feel rich products arena. Build with user friendly and catches all user details,
                       for strong recommendation according to their previous searched products.
                     </p>
                     <ion-chip>
@@ -368,10 +398,10 @@
               <span style="padding: 1%;">
                 <a style="text-decoration: none; color: #FF5C00;" href="/home"><ion-icon name="home-outline"></ion-icon> Home</a>
               </span> 
-              <span style="padding: 1%;">
+              <!-- <span style="padding: 1%;">
                 <a style="text-decoration: none; color: #FF5C00;" href="/service">
                   <ion-icon name="construct-outline"></ion-icon> Service</a>
-              </span> 
+              </span>  -->
               <span style="padding: 1%;">
                 <a style="text-decoration: none; color: #FF5C00;"
                 href="/exp">

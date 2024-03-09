@@ -13,7 +13,7 @@
     </ion-content>
   </ion-menu>
 
-      <ion-header [translucent]="true">
+  <ion-header  id="main-content">
     <ion-toolbar color="dark">
 
       <ion-title class="fadeInElement"
@@ -21,21 +21,38 @@
         <ion-row class="fadeInElement"
           style="font-family: cursive; font-weight: 700; font-size: 26px; align-items: center;">
            
-          <ion-col size="9" size-lg="9" size-md="9" size-sm="9">           
-            <ion-avatar>
-         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-              <span style="padding: 1%;"> Akshay</span>
+          <ion-col size="9" size-lg="5" size-md="3" size-sm="7">           
+            
+              <div style="display: flex; align-items: center;">
+                <!-- <ion-avatar > -->
+                <img class="logo-image" alt="Silhouette of a person's head" src="\assets\frontend-dev.avif" />
+                <span style="margin-left: 10px;">Akshay</span>
+              <!-- </ion-avatar> -->
+              </div>
               
-            </ion-avatar>
           </ion-col>
 
-          <ion-col size="3" size-lg="3" size-md="3" size-sm="3">
-                  <div>
+          <!--  MENU ICON WITH SIDEBAR-->
+
+          <ion-col size="1" size-sm="1">
+                  <div class="menu-sidebar">
                     <ion-buttons slot="end">
                       <ion-menu-button></ion-menu-button>
                     </ion-buttons>
                   </div>
 
+          </ion-col>
+
+
+          <ion-col size="6" size-lg="6" size-md="6" >
+            <span class="topbar-toolbar">
+              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span> <span class="topbar-toolbar"> <a
+                href="/service">
+                <ion-icon name="construct-outline"></ion-icon> Service</a> </span> <span class="topbar-toolbar"> <a
+                href="/exp">
+                <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="topbar-toolbar"> <a
+                href="/reachus">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
           </ion-col>
 
         </ion-row>

@@ -18,11 +18,33 @@ ion-toolbar {
       margin-bottom: 10px; /* Add spacing between stacked toolbar items */
     }
   }
-  
+
+  @media only screen and (max-width:576px) {
+    .topbar-toolbar {
+      display: none;
+    }
+    .menu-sidebar{
+      display: block;
+    }
+  }
   
   ion-header {
       position: fixed;
       z-index: 3;
+  }
+  .topbar-toolbar{
+    a{
+      color: #FF5C00;
+      padding: 1%;
+      // text-decoration: none;
+    }
+  }
+
+  @media only screen and (min-width:576px) {
+    .menu-sidebar{
+      display: none;
+    }
+
   }
 
 
@@ -274,10 +296,6 @@ ion-toolbar {
   /* Active (pressed) effect */
   .button:active {
     transform: translateY(1px);
-  }
-  .toolbar {
-    padding: 2%;
-    color: #FF5C00;
   }
   
   // TO TOGGLE

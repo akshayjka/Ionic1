@@ -1,8 +1,47 @@
 
 ion-header {
     position: fixed;
-    
 }
+.logo-image{
+  width: 10%;
+  border-radius: 50%;
+}
+@media screen and (max-width:750px) {
+  .logo-image {
+    width: 40%;
+  }
+}
+  
+  /* Media query for small screens (e.g., smartphones) */
+  @media only screen and (max-width: 576px) {
+    .toolbar {
+      display: block; /* Change from inline to block for stacked layout */
+      margin-bottom: 10px; /* Add spacing between stacked toolbar items */
+    }
+  }
+
+  @media only screen and (max-width:576px) {
+    .topbar-toolbar {
+      display: none;
+    }
+    .menu-sidebar{
+      display: block;
+    }
+  }
+  .topbar-toolbar{
+    a{
+      color: #FF5C00;
+      padding: 1%;
+      // text-decoration: none;
+    }
+  }
+
+  @media only screen and (min-width:576px) {
+    .menu-sidebar{
+      display: none;
+    }
+
+  }
 .ion-padding{
   padding: 10%;
   background-color: black;
