@@ -215,13 +215,27 @@ ion-toolbar {
     .fixed-column {
       flex: 0 0 40%; 
     position: fixed;
+    // height: 100vh;
     margin-top: 3%;
+    height: 20px;
     }
+
     @media screen and (max-width:768px) {
       .fixed-column {
         flex-direction: column;
           position: relative; 
+          height: auto;
           // margin-top: 5%;
+      }
+    }
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Start with opacity 0 */
+      }
+      to {
+        opacity: 1; /* Fade in to opacity 1 */
       }
     }
     
@@ -230,16 +244,24 @@ ion-toolbar {
       margin-left: auto; /* Push the right column to the right */
       overflow-y: auto;
       margin-top: 5%;
+  //     background: linear-gradient(-45deg, #685d5c, #685d5c,#222320, #685d5c);
+  // background-size: 400% 400%;
+  // animation: backgroundAnimation 5s ease infinite;
+    }
+    @keyframes backgroundAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   
     @media screen and (max-width: 768px) {
-   
-      // .fixed-column{
-      //   flex-direction: column;
-      //   position: relative; 
-      //   margin-top: 5%;/* Take full width on smaller screens */
-        
-      // }
+  
       .scrollable-column {
         flex:1;
       /* Remove margin to stack columns on top of each other */
@@ -375,3 +397,10 @@ ion-toolbar {
   ion-footer{
     z-index: 0;
   }
+
+
+
+  // animation css latest
+
+
+  
