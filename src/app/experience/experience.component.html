@@ -1,7 +1,7 @@
 <div class="container">
  
 
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" class="menu">
 
     <ion-content class="ion-padding">
 
@@ -48,15 +48,15 @@
 
           <ion-col size="6" size-lg="6" size-md="6" >
             <span class="topbar-toolbar">
-              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
+              <a href="/home" id="side-btn"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
                <!-- <span class="topbar-toolbar"> <a
                 href="/service">
                 <ion-icon name="construct-outline"></ion-icon> Service</a> </span>  -->
                 
                 <span class="topbar-toolbar"> <a
-                href="/exp">
+               id="side-btn" href="/exp">
                 <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="topbar-toolbar"> <a
-                href="/reachus">
+               id="side-btn" href="/reachus">
                 <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
           </ion-col>
 
@@ -146,8 +146,8 @@
 
 
           <ion-label>
-            <a style="padding-left: 5%;" href="https://wealth-bridge-ec6d3.web.app/land">
-              View Project
+            <a style="padding-left: 5%;" href="https://github.com/akshayjka/wealthbridge" target="_blank">
+              Project
              </a></ion-label>
             <!-- https://wealth-bridge-ec6d3.web.app/land -->
           <!-- </ion-label> -->
@@ -222,7 +222,7 @@
           </ion-label>
 
 
-          <ion-label><a style="padding-left: 5%;" href="https://github.com/akshayjka/Widget2">
+          <ion-label><a style="padding-left: 5%;" href="https://github.com/akshayjka/Widget2" target="_blank">
            Open Source Code
           </a></ion-label>
         </ion-item>
@@ -297,11 +297,45 @@
           </ion-label>
 
 
-          <ion-label><a style="padding-left: 5%;" href="https://github.com/akshayjka/uobadminportal-main-feature-branch">
+          <ion-label><a style="padding-left: 5%;" href="https://github.com/akshayjka/uobadminportal-main-feature-branch" target="_blank">
             Open Source Code
            </a></ion-label>
         </ion-item>
+      </ion-col> <br>
+
+
+
+      <ion-col size="12" size-sm="12">
+        <ion-item color="dark">
+
+          <ion-label>
+            <p class="resume">
+              Ph : +91 8883332746
+            </p>
+          </ion-label>
+          <ion-label>
+            <div class="resume">
+              <a href="\assets\resume\Akshay_resume.pdf" target="_blank" class="resume-a">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
+                  <path fill="currentColor" d="M16 8.286C8.454 8.286 2.5 16 2.5 16s5.954 7.715 13.5 7.715c5.77 0 13.5-7.715 13.5-7.715S21.77 8.286 16 8.286zm0 12.52c-2.65 0-4.807-2.156-4.807-4.806S13.35 11.193 16 11.193S20.807 13.35 20.807 16S18.65 20.807 16 20.807zm0-7.612a2.806 2.806 0 1 0 0 5.611a2.806 2.806 0 0 0 0-5.611z"/>
+              </svg>
+              View Resume</a>
+            </div>
+          </ion-label>
+
+          <ion-label>
+            <p class="resume">
+              E-mail : akshayjkrd&#64;gmail.com
+            </p>
+          </ion-label>
+
+          
+          
+        </ion-item>  <br>
       </ion-col>
+
+
+
 
       <ion-col size="12" size-sm="12">
         <ion-item color="dark">
@@ -449,9 +483,11 @@
         </ion-item>  <br>
       </ion-col>
 
+     
 
 
-      <ion-footer >
+
+      <ion-footer style="height: 100%;">
         <ion-toolbar color="dark">
           <ion-title>
   

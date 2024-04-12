@@ -1,7 +1,7 @@
 
 <div class="container">
   
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" class="menu">
 
     <!-- <ion-content class="ion-padding"> -->
   
@@ -48,16 +48,16 @@
 
           <ion-col size="6" size-lg="6" size-md="6" >
             <span class="topbar-toolbar">
-              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
+              <a id="side-btn" href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
                <!-- <span class="topbar-toolbar"> 
                 <a
                 href="/service">
                 <ion-icon name="construct-outline"></ion-icon> Service</a> </span>  -->
                 
-                <span class="topbar-toolbar"> <a
+                <span class="topbar-toolbar"> <a id="side-btn"
                 href="/exp">
                 <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="topbar-toolbar"> <a
-                href="/reachus">
+              id="side-btn"  href="/reachus">
                 <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
           </ion-col>
 
@@ -75,8 +75,8 @@
 
         <ion-card color="dark" class="card1">
           <ion-card-title style="padding: 3%; font-family: sans-serif; font-weight: 600;">Akshay</ion-card-title>
-          <img style="width: 44%; border-radius: 50%; padding: 2%;" alt="Silhouette of mountains"
-            src="\assets\frontend-dev.avif" />
+          <img style="width: 70%;  padding: 2%;" alt="Silhouette of mountains"
+            src="\assets\new.jpg" />
           <ion-card-header>
 
             <ion-card-subtitle>Mean Stack Developer</ion-card-subtitle>
@@ -87,8 +87,12 @@
               Strong with Front End Development. Mean Stack Developer. Loves to Write and Learn.
             </p>
             <span style="margin-top: 3%;">
-              <ion-icon style="width: 30%; height: 40px;" name="logo-linkedin"></ion-icon>
-              <ion-icon style="width: 30%; height: 40px;" name="logo-github"></ion-icon>
+              <a style="text-decoration: none; color:#FF5C00;" href="https://www.linkedin.com/in/akshay-jai-1a662219b/" target="_blank">
+                <ion-icon style="width: 30%; height: 40px; cursor: pointer;" name="logo-linkedin"> </ion-icon>
+              </a>
+              <a style="color: #FF5C00;" href="https://github.com/akshayjka/" target="_blank">
+                <ion-icon style="width: 30%; height: 40px;" name="logo-github"></ion-icon>
+              </a>
             </span>
 
           </ion-card-content>
@@ -114,10 +118,10 @@
           <ion-grid>
             <ion-row>
               <ion-col size="12" size-sm="12" size-md="12" size-lg="12">
-                <form [formGroup]="contactForm">
+                <form class="form" [formGroup]="contactForm">
 
                   <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
-                    <ion-input fill="outline" label="Email" label-placement="floating" placeholder="Enter Email" formControlName="email"></ion-input>
+                    <ion-input fill="outline" label="Email" label-placement="floating" [(ngModel)]="usermail" placeholder="Enter Email" formControlName="email"></ion-input>
                   </ion-col>
                   <ion-col size="12" size-sm="12" size-lg="6" size-md="6">
                     <ion-input fill="outline" label="Name" label-placement="floating" placeholder="Enter Name" formControlName="name"></ion-input>
@@ -157,16 +161,12 @@
             </ion-row>
           </ion-grid>
 
-        </div>
-
-        
-
-
+        </div>      
       </ion-col>
-      <ion-footer >
-        <ion-toolbar color="dark" size="12" size-lg="12" size-sm="12" size-md="12">
+
+      <ion-footer>
+        <ion-toolbar color="dark" size="12" size-lg="12" size-sm="12" size-md="12"  >
           <ion-title>
-  
             <span style="text-align: center;">
               <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
                 <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>

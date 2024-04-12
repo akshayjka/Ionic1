@@ -15,6 +15,7 @@ ion-header {
   /* Media query for small screens (e.g., smartphones) */
   @media only screen and (max-width: 576px) {
     .toolbar {
+      z-index: 3;
       display: block; /* Change from inline to block for stacked layout */
       margin-bottom: 10px; /* Add spacing between stacked toolbar items */
     }
@@ -26,7 +27,11 @@ ion-header {
     }
     .menu-sidebar{
       display: block;
+      z-index: 3;
     }
+  }
+  .menu {
+    z-index: 3;
   }
   .topbar-toolbar{
     a{
@@ -49,6 +54,11 @@ ion-header {
 ion-toolbar {
   height: 100px;
   z-index: 2;
+}
+@media screen and (max-width:768px){
+  ion-toolbar{
+    height: 100%;
+  }
 }
 .container {
     overflow-y: scroll;
@@ -195,9 +205,21 @@ ion-toolbar {
   opacity: 0.5;
 }
 #side-btn{
+  // z-index: 3;
   width: 70%;
   padding: 5%;
   margin-top: 2%;
+  text-decoration: none;
+    padding: 15px 30px; 
+    margin: 3% 0% 3% 10%;
+    border-radius: 25px; /* Adjust border-radius as needed */
+    background-color: #24272C; /* Button background color */
+    color: #FF5C00; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+    cursor: pointer; /* Show pointer cursor on hover */
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 0px 8px 4px rgba(236, 204, 204, 0.1);
 }
 
 /* Hover effect */
@@ -226,6 +248,7 @@ ion-menu{
 // }
 .toolbar {
 // background-color: #333;
+z-index: 3;
 background-image: url("/assets/counter-background.png");
 height: 100%;
 }
@@ -259,6 +282,12 @@ ion-footer{
   z-index: 0;
 }
 
+.form{
+  ion-input{
+    z-index: 1;
+  }
+ 
+}
 
 // dro
 

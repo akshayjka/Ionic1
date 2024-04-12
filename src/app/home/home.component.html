@@ -41,12 +41,12 @@
            
           <ion-col size="9" size-lg="5" size-md="3" size-sm="7">           
             
-              <div style="display: flex; align-items: center;">
-                <!-- <ion-avatar > -->
-                <img class="logo-image" alt="Silhouette of a person's head" src="\assets\frontend-dev.avif" />
-                <span style="margin-left: 10px;">Akshay</span>
-              <!-- </ion-avatar> -->
-              </div>
+            <div style="display: flex; align-items: center;">
+              <!-- <ion-avatar > -->
+              <img class="logo-image" alt="Silhouette of a person's head" src="\assets\frontend-dev.avif" />
+              <span style="margin-left: 10px;">Akshay</span>
+            <!-- </ion-avatar> -->
+            </div>
               
           </ion-col>
 
@@ -64,15 +64,15 @@
 
           <ion-col size="6" size-lg="6" size-md="6" >
             <span class="topbar-toolbar">
-              <a href="/home"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
+              <a href="/home" id="side-btn"><ion-icon name="home-outline"></ion-icon> Home</a> </span>
                <!-- <span class="topbar-toolbar"> <a
                 href="/service">
                 <ion-icon name="construct-outline"></ion-icon> Service</a> </span>  -->
                 
-                <span class="topbar-toolbar"> <a
+                <span class="topbar-toolbar"> <a id="side-btn"
                 href="/exp">
                 <ion-icon name="code-working-outline"></ion-icon> Work</a> </span> <span class="topbar-toolbar"> <a
-                href="/reachus">
+                  id="side-btn"  href="/reachus">
                 <ion-icon name="chatbox-ellipses-outline"></ion-icon> Reach Us</a> </span>
           </ion-col>
 
@@ -81,7 +81,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" class="menu">
 
     <ion-content class="ion-padding">
 
@@ -104,19 +104,19 @@
 
         <ion-card color="dark" class="card1">
           <ion-card-title style="padding: 3%; font-family: sans-serif; font-weight: 600;">Akshay</ion-card-title>
-          <!-- <img style="width: 44%; border-radius: 50%; padding: 2%;" alt="Silhouette of mountains"
-            src="\assets\frontend-dev.avif" /> -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-              <!-- Background circle -->
+          <img style="width: 70%;  padding: 2%;" alt="Silhouette of mountains"
+            src="\assets\new.jpg" />
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+              
               <circle cx="50" cy="50" r="45" fill="none" stroke="lightgray" stroke-width="4" />
             
-              <!-- Laptop body -->
+              
               <rect x="25" y="30" width="50" height="40" fill="#f0f0f0" stroke="none" />
             
-              <!-- Laptop screen -->
+              
               <rect x="30" y="35" width="40" height="30" fill="#007bff" stroke="none" />
             
-              <!-- Keyboard keys -->
+           
               <rect x="32" y="66" width="36" height="2" fill="#e0e0e0" stroke="none" />
               <rect x="32" y="70" width="8" height="2" fill="#e0e0e0" stroke="none" />
               <rect x="42" y="70" width="4" height="2" fill="#e0e0e0" stroke="none" />
@@ -124,34 +124,34 @@
               <rect x="54" y="70" width="4" height="2" fill="#e0e0e0" stroke="none" />
               <rect x="60" y="70" width="8" height="2" fill="#e0e0e0" stroke="none" />
             
-              <!-- Left hand -->
+              
               <path d="M25,65 C25,55 20,45 30,40" fill="none" stroke="black" stroke-width="2">
                 <animate attributeName="d" values="M25,65 C25,55 20,45 30,40; M25,65 C25,55 15,45 20,40" dur="1s" repeatCount="indefinite" />
               </path>
             
-              <!-- Right hand -->
+             
               <path d="M75,65 C75,55 80,45 70,40" fill="none" stroke="black" stroke-width="2">
                 <animate attributeName="d" values="M75,65 C75,55 80,45 70,40; M75,65 C75,55 85,45 80,40" dur="1s" repeatCount="indefinite" />
               </path>
             
-              <!-- Head -->
+      
               <circle cx="50" cy="35" r="8" fill="#f0f0f0" stroke="black" stroke-width="2" />
             
-              <!-- Glasses frame -->
+         
               <path d="M45,32 L55,32 M45,33 L55,33 M45,32 L45,33 M55,32 L55,33" fill="none" stroke="black" stroke-width="2" />
             
-              <!-- Left eye -->
+
               <circle cx="47" cy="33" r="1" fill="black" />
             
-              <!-- Right eye -->
+            
               <circle cx="53" cy="33" r="1" fill="black" />
             
-              <!-- Smile -->
+              
               <path d="M46,38 Q50,41 54,38" fill="none" stroke="black" stroke-width="2">
                 <animate attributeName="d" values="M46,38 Q50,41 54,38; M46,38 Q50,43 54,38" dur="1s" repeatCount="indefinite" />
               </path>
             
-              <!-- Coding lines -->
+          
               <line x1="30" y1="50" x2="70" y2="50" stroke="#007bff" stroke-width="2">
                 <animate attributeName="x1" values="30; 35; 30" dur="1s" repeatCount="indefinite" />
                 <animate attributeName="x2" values="70; 65; 70" dur="1s" repeatCount="indefinite" />
@@ -164,11 +164,10 @@
                 <animate attributeName="x1" values="30; 35; 30" dur="1s" repeatCount="indefinite" />
                 <animate attributeName="x2" values="70; 65; 70" dur="1s" repeatCount="indefinite" />
               </line>
-            </svg>
+            </svg> -->
             
             
             
-            <!-- <video class="video" src="\assets\20764468.mp4" [muted]="'muted'" autoplay loop></video> -->
           <ion-card-header>
 
             <ion-card-subtitle>Mean Stack Developer</ion-card-subtitle>
@@ -179,8 +178,13 @@
               Strong with Front End Development. Mean Stack Developer. Loves to Code, Develop and Create.
             </p>
             <span style="margin-top: 3%;">
-              <ion-icon style="width: 30%; height: 40px;" name="logo-linkedin"></ion-icon>
-              <ion-icon style="width: 30%; height: 40px;" name="logo-github"></ion-icon>
+              <a style="text-decoration: none; color:#FF5C00;" href="https://www.linkedin.com/in/akshay-jai-1a662219b/" target="_blank">
+                <ion-icon style="width: 30%; height: 40px; cursor: pointer;" name="logo-linkedin"> </ion-icon>
+              </a>
+              <a style="color: #FF5C00;" href="https://github.com/akshayjka/" target="_blank">
+                <ion-icon style="width: 30%; height: 40px;" name="logo-github"></ion-icon>
+              </a>
+              
             </span>
 
           </ion-card-content>
@@ -215,7 +219,7 @@
         <span style="color: white;">Projects</span>
 
 
-        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+        <ion-item-divider style="background-color: #FF5C00; z-index: 1;"></ion-item-divider>
 
 
         <div class="about-me">
@@ -241,12 +245,12 @@
 
         </div>
 
-        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+        <ion-item-divider style="background-color: #FF5C00; z-index: 1;"></ion-item-divider>
 
         <app-skills></app-skills>
 
 
-        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+        <ion-item-divider style="background-color: #FF5C00; z-index: 1;"></ion-item-divider>
 
         <!-- FEATURE PROJECT -->
 
@@ -255,10 +259,10 @@
             <b style="color: #FF5C00;">
               Projects
             </b>
-           <span style="padding: 10%;">
+           <!-- <span style="padding: 10%;">
             <a class="view-work" href="/exp">View Full Archive
               <ion-icon name="arrow-up-outline"></ion-icon>
-            </a></span> 
+            </a></span>  -->
           </h2>
           <ion-grid>
             <ion-row>
@@ -382,7 +386,7 @@
         </div>
 
 
-        <ion-item-divider style="background-color: #FF5C00;"></ion-item-divider>
+        <ion-item-divider style="background-color: #FF5C00; z-index: 1;"></ion-item-divider>
 
 
         <div class="contact-me">
@@ -425,8 +429,6 @@
 
           </ion-grid>
 
-          
-
         </div>
 
         <!-- <button class="scroll-to-top" (click)="scrollToTop()">
@@ -437,7 +439,6 @@
       <ion-footer >
         <ion-toolbar color="dark">
           <ion-title>
-  
             <span style="text-align: center;">
               <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
                 <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>

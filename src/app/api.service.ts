@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,8 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   sendMail(formData:any):Observable<any>{
-    return this.http.post("http://localhost:4000/users/submit-form",formData)
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.post("http://localhost:4000/users/submit-form",formData, {headers})
   }
 
   // emailjs.send("service_qcba45w","template_z942xkp",{

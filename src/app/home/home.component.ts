@@ -75,17 +75,30 @@ export class HomeComponent  implements OnInit {
 
   }
   submitForm() {
-    emailjs.init('XwnxwBXp56Lfk9wGU')
-    emailjs.send("service_qcba45w","template_z942xkp",{
-      from_name: this.contactForm.value.name,
-      to_name: "Akshay",
-      message: this.contactForm.value.text,
-      });
-      setTimeout(() => {
-      this.presentToast('top');
-      this.contactForm.reset();
-        
-      }, 3500);
+    // Get the sender's email from the form
+    const senderEmail = this.contactForm.value.email;
+  
+    // Construct the request body with the sender's email
+    const reqBody = {
+      from: senderEmail,
+      to: "akshayjkrd@gmail.com",
+      subject: "Thanks for subscribing",
+      text: this.contactForm.value.text + '  ' + this.contactForm.value.email + '  ' + this.contactForm.value.phone, 
+    };
+  
+    // Send the email using your API service
+    this.api_service.sendMail(reqBody).subscribe(
+      () => {
+        // Email sent successfully, handle any further actions
+        console.log("Email sent successfully");
+        this.presentToast('top');
+        this.contactForm.reset();
+      },
+      error => {
+        // Error sending email, handle the error
+        console.error("Error sending email:", error);
+      }
+    );
   }
 
 }

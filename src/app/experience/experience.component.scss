@@ -7,7 +7,29 @@ ion-header {
     position: fixed;
     
 }
-
+ion-toolbar{
+  height: 100px;
+}
+@media screen and (max-width:768px){
+  ion-toolbar{
+    height: 100%;
+  }
+}
+.resume {
+  text-decoration: none;
+  font-family: 'sans';
+  font-size: 22px;
+  color: #FF5C00;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.resume:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+.resume-a{
+  color: #FF5C00;
+  text-decoration: none;
+}
 .logo-image{
   width: 10%;
   border-radius: 50%;
@@ -33,6 +55,9 @@ ion-header {
   .menu-sidebar{
     display: block;
   }
+}
+.menu {
+  z-index: 3;
 }
 
 .topbar-toolbar{
@@ -122,6 +147,7 @@ ion-menu{
     }
     ion-footer{
       height:500px;
+      z-index: 1;
     }
   }
   @media screen and (max-width:750px) {
@@ -150,4 +176,15 @@ ion-menu{
     width: 70%;
     padding: 5%;
     margin-top: 2%;
+    text-decoration: none;
+    padding: 15px 30px; 
+    margin: 3% 0% 3% 10%;
+    border-radius: 25px; /* Adjust border-radius as needed */
+    background-color: #24272C; /* Button background color */
+    color: #FF5C00; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+    cursor: pointer; /* Show pointer cursor on hover */
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 0px 8px 4px rgba(236, 204, 204, 0.1);
   }
